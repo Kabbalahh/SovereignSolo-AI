@@ -1,0 +1,43 @@
+# 1. Configuração do Repositório
+backend:
+  name: github
+  repo: kabbalahh/sovereignsolo-ai
+  branch: main
+  base_url: https://github-oauth-login.net
+
+# 2. Roteamento de Mídias
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+# 3. Mapeamento de Banco de Dados (Collections)
+collections:
+  # --- MÓDULO DE INBOUND (BLOG) ---
+  - name: "posts"
+    label: "Artigos (Blog de Tráfego)"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Descrição SEO", name: "description", widget: "text"}
+      - {label: "Data de Publicação", name: "date", widget: "datetime"}
+      - {label: "Corpo do Artigo", name: "body", widget: "markdown"}
+
+  # --- MÓDULO COMERCIAL (PRODUTOS) ---
+  - name: "products"
+    label: "Matriz de Produtos (Ebooks)"
+    folder: "_products"
+    create: true
+    identifier_field: "id"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "product"}
+      - {label: "ID de Sistema (ex: ebook-express)", name: "id", widget: "string"}
+      - {label: "Título do Produto", name: "title", widget: "string"}
+      - {label: "Tagline (Promessa)", name: "tagline", widget: "string"}
+      - {label: "Preço (ex: 47,00)", name: "price", widget: "string"}
+      - {label: "Badge (ex: Mais Vendido)", name: "badge", widget: "string", required: false}
+      - {label: "Imagem de Capa", name: "cover_image", widget: "image"}
+      - {label: "Link Hotmart", name: "hotmart_url", widget: "string"}
+      - {label: "Estrutura Detalhada / Copy", name: "body", widget: "markdown"}
