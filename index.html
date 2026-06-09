@@ -1,4 +1,4 @@
----
+--
 layout: default
 ---
 
@@ -17,7 +17,7 @@ layout: default
 
     <!-- Grid de Ebooks Dinâmicos via YAML -->
     <div class="catalog-grid">
-        {% for product in site.data.products %}
+        {% for product in site.products %}
         <article class="product-card">
             <div>
                 {% if product.badge %}
@@ -33,6 +33,7 @@ layout: default
                 </div>
                 <a href="{{ product.hotmart_url }}" target="_blank" rel="noopener noreferrer" class="btn-cta">Adquirir Acesso</a>
             </div>
+            <a href="{{ product.url | relative_url }}" style="color: var(--quantum-cyan); text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 1rem;">Saiba mais sobre este manual →</a>
         </article>
         {% endfor %}
     </div>

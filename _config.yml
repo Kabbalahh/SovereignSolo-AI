@@ -12,3 +12,9 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+
+  # Configurações de Collections
+collections:
+  products:
+    output: true
+    permalink: /produtos/:path/
