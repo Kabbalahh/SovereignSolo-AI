@@ -56,4 +56,35 @@ layout: default
         </div>
     </section>
 
+
+    <!-- Schema.org Data Structured - SovereignSolo AI -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "numberOfItems": {{ site.data.products | size }},
+      "itemListElement": [
+        {% for product in site.data.products %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "Product",
+            "name": "{{ product.title }}",
+            "description": "{{ product.tagline }}",
+            "image": "{{ site.url }}{{ product.cover_image }}",
+            "offers": {
+              "@type": "Offer",
+              "price": "{{ product.price | replace: ',', '.' }}",
+              "priceCurrency": "BRL",
+              "availability": "https://schema.org/InStock",
+              "url": "{{ product.hotmart_url }}"
+            }
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    </script>
+
 </main>
