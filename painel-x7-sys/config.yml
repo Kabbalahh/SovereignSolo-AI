@@ -3,7 +3,7 @@ backend:
   name: github
   repo: kabbalahh/sovereignsolo-ai
   branch: main
-  base_url: https://project-trk11.vercel.app
+  base_url: https://netlify-cms-oauth-sovereign.vercel.app
 
 # 2. Roteamento de Mídias
 media_folder: "assets/images"
