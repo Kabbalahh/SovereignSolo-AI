@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} - {{ site.tagline }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    
+    <!-- Open Graph (Redes Sociais / WhatsApp) -->
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}">
+
+    <!-- Google Fonts & Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+    <header style="border-bottom: 1px solid rgba(255,255,255,0.05); padding: 1.5rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center;">
+            <a href="{{ '/' | relative_url }}" style="color: #ffffff; text-decoration: none; font-weight: 800; font-size: 1.3rem; letter-spacing: -0.5px;">
+                Sovereign<span style="color: var(--quantum-cyan);">Solo AI</span>
+            </a>
+            <nav>
+                <a href="{{ '/' | relative_url }}" style="color: var(--text-pure); text-decoration: none; margin-left: 2rem; font-size: 0.9rem;">Ebooks</a>
+                <a href="#blog" style="color: var(--text-muted); text-decoration: none; margin-left: 2rem; font-size: 0.9rem;">Blog/Estratégia</a>
+            </nav>
+        </div>
+    </header>
+
+    {{ content }}
+
+    <footer style="margin-top: 8rem; border-top: 1px solid rgba(255,255,255,0.05); padding: 3rem 0; text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+        <p>&copy; 2026 SovereignSolo AI. Desenvolvido para Alta Conversão.</p>
+    </footer>
+
+</body>
+</html>
