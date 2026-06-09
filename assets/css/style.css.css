@@ -1,0 +1,98 @@
+:root {
+    --bg-obsidian: #080b11;
+    --bg-surface: #111622;
+    --quantum-cyan: #00f2fe;
+    --hyper-violet: #7f00ff;
+    --conversion-green: #00ff87;
+    --text-pure: #f3f4f6;
+    --text-muted: #9ca3af;
+    --gradiente-btn: linear-gradient(135deg, #00ff87 0%, #60efff 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-obsidian);
+    color: var(--text-pure);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.hero-frame {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: radial-gradient(circle at center, rgba(127, 0, 255, 0.08) 0%, transparent 60%);
+}
+
+.hero-main-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin: 0 0 1rem 0;
+    background: linear-gradient(180deg, #ffffff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.product-card {
+    background-color: var(--bg-surface);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover {
+    border-color: var(--quantum-cyan);
+    transform: translateY(-4px);
+}
+
+.card-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 242, 254, 0.1);
+    color: var(--quantum-cyan);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.btn-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--gradiente-btn);
+    color: #080b11;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+}
+
+.btn-cta:hover {
+    opacity: 0.9;
+}
