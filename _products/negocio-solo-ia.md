@@ -9,5 +9,5 @@ hotmart_url: "https://pay.hotmart.com/SEU_LINK_AQUI_1"
 badge: "Mais Vendido"
 ---
 
-### Estrutura do Ebook
-Aqui entra o texto de conversão (Copywriting) longo e detalhado do produto. Este conteúdo será renderizado nativamente na subpágina exclusiva do infoproduto.
+### Estrutura Detalhada
+(O corpo de texto neste espaço será injetado nativamente na variável {{ content }} da sua subpágina de vendas).

@@ -8,5 +8,5 @@ cover_image: "/assets/images/ebook-wa.webp"
 hotmart_url: "https://pay.hotmart.com/TEST_LINK_02"
 badge: "Automação"
 ---
-### Conteúdo do Teste 02
-Validação de página exclusiva para o produto de Automação de WhatsApp.
+### Estrutura Detalhada
+(O corpo de texto neste espaço será injetado nativamente na variável {{ content }} da sua subpágina de vendas).

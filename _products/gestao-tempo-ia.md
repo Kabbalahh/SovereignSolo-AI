@@ -8,5 +8,5 @@ cover_image: "/assets/images/ebook-tempo.webp"
 hotmart_url: "https://pay.hotmart.com/TEST_LINK_07"
 badge: "Foco"
 ---
-### Conteúdo do Teste 07
-Rotinas e rastreamento de performance pessoal com IA.
+### Estrutura Detalhada
+(O corpo de texto neste espaço será injetado nativamente na variável {{ content }} da sua subpágina de vendas).

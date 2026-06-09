@@ -8,5 +8,5 @@ cover_image: "/assets/images/ebook-express.webp"
 hotmart_url: "https://pay.hotmart.com/TEST_LINK_08"
 badge: "Produção"
 ---
-### Conteúdo do Teste 08
-Pipeline de lançamento ultra-rápido de produtos digitais.
+### Estrutura Detalhada
+(O corpo de texto neste espaço será injetado nativamente na variável {{ content }} da sua subpágina de vendas).

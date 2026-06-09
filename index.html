@@ -18,7 +18,7 @@ layout: default
     <div id="filter-container" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap;">
     </div>
 
-    <div class="catalog-grid">
+   <div class="catalog-grid">
         {% for product in site.products %}
         <article class="product-card" data-category="{{ product.badge | default: 'Geral' }}">
             <div>
@@ -35,7 +35,7 @@ layout: default
                 </div>
                 <a href="{{ product.hotmart_url }}" target="_blank" rel="noopener noreferrer" class="btn-cta" data-product-id="{{ product.id }}" data-product-title="{{ product.title }}">Adquirir Acesso</a>
             </div>
-            <a href="{{ product.url | relative_url }}" style="color: var(--quantum-cyan); text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 1rem;">Saiba mais sobre este manual →</a>
+            <a href="{{ product.url | relative_url }}" style="color: var(--quantum-cyan); text-decoration: none; font-size: 0.9rem; display: block; margin-top: 1rem; text-align: center;">Saiba mais sobre este manual →</a>
         </article>
         {% endfor %}
     </div>

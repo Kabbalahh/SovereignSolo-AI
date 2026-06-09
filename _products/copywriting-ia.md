@@ -8,5 +8,5 @@ cover_image: "/assets/images/ebook-copy.webp"
 hotmart_url: "https://pay.hotmart.com/TEST_LINK_01"
 badge: "Escrita"
 ---
-### Conteúdo do Teste 01
-Validação de página exclusiva para o produto de Copywriting.
+### Estrutura Detalhada
+(O corpo de texto neste espaço será injetado nativamente na variável {{ content }} da sua subpágina de vendas).

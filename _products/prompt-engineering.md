@@ -8,5 +8,5 @@ cover_image: "/assets/images/ebook-prompts.webp"
 hotmart_url: "https://pay.hotmart.com/TEST_LINK_06"
 badge: "Técnico"
 ---
-### Conteúdo do Teste 06
-Estruturas lógicas de prompts e engenharia de contexto.
+### Estrutura Detalhada
+(O corpo de texto neste espaço será injetado nativamente na variável {{ content }} da sua subpágina de vendas).

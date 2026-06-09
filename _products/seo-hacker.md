@@ -9,5 +9,5 @@ hotmart_url: "https://pay.hotmart.com/SEU_LINK_AQUI_2"
 badge: "Estratégico"
 ---
 
-### O que você vai aprender
-Conteúdo focado em indexação rápida utilizando IA para atração de tráfego orgânico qualificado.
+### Estrutura Detalhada
+(O corpo de texto neste espaço será injetado nativamente na variável {{ content }} da sua subpágina de vendas).

@@ -8,5 +8,5 @@ cover_image: "/assets/images/ebook-design.webp"
 hotmart_url: "https://pay.hotmart.com/TEST_LINK_04"
 badge: "Criativos"
 ---
-### Conteúdo do Teste 04
-Validação de layouts e imagens geradas por IA.
+### Estrutura Detalhada
+(O corpo de texto neste espaço será injetado nativamente na variável {{ content }} da sua subpágina de vendas).

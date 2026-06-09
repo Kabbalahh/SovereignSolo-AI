@@ -8,5 +8,5 @@ cover_image: "/assets/images/ebook-agencia.webp"
 hotmart_url: "https://pay.hotmart.com/TEST_LINK_05"
 badge: "Negócios"
 ---
-### Conteúdo do Teste 05
-Validação do modelo de agência solo automatizada.
+### Estrutura Detalhada
+(O corpo de texto neste espaço será injetado nativamente na variável {{ content }} da sua subpágina de vendas).

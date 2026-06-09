@@ -8,5 +8,5 @@ cover_image: "/assets/images/ebook-trafego.webp"
 hotmart_url: "https://pay.hotmart.com/TEST_LINK_03"
 badge: "Anúncios"
 ---
-### Conteúdo do Teste 03
-Validação de página exclusiva para Tráfego Pago.
+### Estrutura Detalhada
+(O corpo de texto neste espaço será injetado nativamente na variável {{ content }} da sua subpágina de vendas).
