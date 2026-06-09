@@ -1,0 +1,14 @@
+title: "SovereignSolo AI"
+tagline: "Engenharia de Negócios de Uma Pessoa Só com IA"
+description: "Ebooks e estratégias de Marketing Digital de alta performance para empreendedores solo que utilizam automação por IA."
+url: "https://seu-usuario.github.io"
+baseurl: ""
+
+# Configurações de Compilação e SEO
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:title/
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
