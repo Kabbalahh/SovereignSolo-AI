@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<section class="hero-frame">
+    <h1 class="hero-main-title">Escale sua Operação com Inteligência Artificial</h1>
+    <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+        Manuais práticos projetados para transformar profissionais em empresas de alta performance com um único operador.
+    </p>
+</section>
+
+<main style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+    
+    <h2 style="font-size: 1.8rem; font-weight: 800; border-left: 4px solid var(--quantum-cyan); padding-left: 1rem; margin-bottom: 2rem;">
+        Sistemas e Infoprodutos Disponíveis
+    </h2>
+
+    <!-- Grid de Ebooks Dinâmicos via YAML -->
+    <div class="catalog-grid">
+        {% for product in site.data.products %}
+        <article class="product-card">
+            <div>
+                {% if product.badge %}
+                <span class="card-badge">{{ product.badge }}</span>
+                {% endif %}
+                <div style="width: 100%; height: 240px; background: #1e293b; border-radius: 8px; margin-bottom: 1.5rem;"></div>
+                <h3 style="font-size: 1.4rem; margin: 0 0 0.5rem 0; font-weight: 800; line-height: 1.3;">{{ product.title }}</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem;">{{ product.tagline }}</p>
+            </div>
+            <div>
+                <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-pure);">
+                    <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">R$</span> {{ product.price }}
+                </div>
+                <a href="{{ product.hotmart_url }}" target="_blank" rel="noopener noreferrer" class="btn-cta">Adquirir Acesso</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+
+    <!-- Seção do Blog (Foco em SEO e Inbound) -->
+    <section id="blog" style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid rgba(255,255,255,0.05);">
+        <h2 style="font-size: 1.8rem; font-weight: 800; border-left: 4px solid var(--hyper-violet); padding-left: 1rem; margin-bottom: 2rem;">
+            Inteligência de Tráfego e Conteúdo
+        </h2>
+        
+        <div style="display: grid; gap: 2rem; margin-top: 2rem;">
+            {% for post in site.posts limit:3 %}
+            <div style="background: var(--bg-surface); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.02);">
+                <div style="color: var(--hyper-violet); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">{{ post.date | date: "%d/%m/%Y" }}</div>
+                <h3 style="margin: 0 0 0.75rem 0; font-size: 1.5rem;">
+                    <a href="{{ post.url | relative_url }}" style="color: #ffffff; text-decoration: none; font-weight: 600;">{{ post.title }}</a>
+                </h3>
+                <p style="color: var(--text-muted); margin: 0; line-height: 1.6;">{{ post.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+</main>
