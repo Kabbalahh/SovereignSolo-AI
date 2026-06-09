@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<main style="max-width: 800px; margin: 4rem auto; padding: 0 2rem;">
+    <article>
+        <header style="margin-bottom: 3rem;">
+            <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">{{ page.title }}</h1>
+            <div style="color: var(--hyper-violet); font-weight: 600; font-size: 0.9rem;">Publicado em {{ page.date | date: "%d/%m/%Y" }}</div>
+        </header>
+        
+        <div class="content-body" style="line-height: 1.8; color: var(--text-pure); font-size: 1.1rem;">
+            {{ content }}
+        </div>
+    </article>
+    <div style="margin-top: 4rem; padding: 2rem; background: var(--bg-surface); border-radius: 12px; text-align: center;">
+        <h3>Quer dominar este conteúdo na prática?</h3>
+        <p style="color: var(--text-muted);">Conheça nossos manuais avançados de engenharia de negócios.</p>
+        <a href="{{ '/' | relative_url }}" class="btn-cta" style="display: inline-block; margin-top: 1rem;">Ver Catálogo de Ebooks</a>
+    </div>
+</main>
