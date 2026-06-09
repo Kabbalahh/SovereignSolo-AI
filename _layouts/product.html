@@ -9,11 +9,15 @@ layout: default
             <p style="color: var(--text-muted); font-size: 1.2rem; margin-top: 1rem;">{{ page.tagline }}</p>
         </header>
 
-        <h1 class="product-title">{{ page.title }}</h1>
-        <div class="product-price">R$ {{ page.price }}</div>
-        <a href="{{ page.hotmart_url }}" class="btn-cta">Adquirir Acesso Imediato</a>
-        <div class="product-body">
+        <div class="product-marketing-body" style="line-height: 1.8; color: var(--text-pure); font-size: 1.1rem;">
             {{ content }}
+        </div>
+
+        <div style="margin-top: 4rem; padding: 2.5rem; background: var(--bg-surface); border-radius: 16px; text-align: center; border: 1px solid rgba(0, 242, 254, 0.2);">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--text-pure); margin-bottom: 1rem;">
+                <span style="font-size: 1.2rem; color: var(--text-muted); font-weight: 400;">R$</span> {{ page.price }}
+            </div>
+            <a href="{{ page.hotmart_url }}" target="_blank" rel="noopener noreferrer" class="btn-cta" style="display: inline-block; max-width: 300px;">Adquirir Acesso Imediato</a>
         </div>
     </article>
 </main>
