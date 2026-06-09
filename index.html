@@ -39,21 +39,21 @@ layout: default
 
     <!-- Seção do Blog (Foco em SEO e Inbound) -->
     <section id="blog" style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid rgba(255,255,255,0.05);">
-        <h2 style="font-size: 1.8rem; font-weight: 800; border-left: 4px solid var(--hyper-violet); padding-left: 1rem; margin-bottom: 2rem;">
-            Inteligência de Tráfego e Conteúdo
-        </h2>
-        
-        <div style="display: grid; gap: 2rem; margin-top: 2rem;">
-            {% for post in site.posts limit:3 %}
-            <div style="background: var(--bg-surface); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.02);">
-                <div style="color: var(--hyper-violet); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">{{ post.date | date: "%d/%m/%Y" }}</div>
-                <h3 style="margin: 0 0 0.75rem 0; font-size: 1.5rem;">
-                    <a href="{{ post.url | relative_url }}" style="color: #ffffff; text-decoration: none; font-weight: 600;">{{ post.title }}</a>
-                </h3>
-                <p style="color: var(--text-muted); margin: 0; line-height: 1.6;">{{ post.description }}</p>
-            </div>
-            {% endfor %}
+    <h2 style="font-size: 1.8rem; font-weight: 800; border-left: 4px solid var(--hyper-violet); padding-left: 1rem; margin-bottom: 2rem;">
+        Inteligência de Tráfego e Conteúdo
+    </h2>
+    
+    <div style="display: grid; gap: 2rem; margin-top: 2rem;">
+        {% for post in site.posts limit:3 %}
+        <div style="background: var(--bg-surface); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.02);">
+            <div style="color: var(--hyper-violet); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">{{ post.date | date: "%d/%m/%Y" }}</div>
+            <h3 style="margin: 0 0 0.75rem 0; font-size: 1.5rem;">
+                <a href="{{ post.url | relative_url }}" style="color: #ffffff; text-decoration: none; font-weight: 600;">{{ post.title }}</a>
+            </h3>
+            <p style="color: var(--text-muted); margin: 0; line-height: 1.6;">{{ post.description }}</p>
         </div>
+        {% endfor %}
+    </div>
     </section>
 
 
