@@ -98,3 +98,28 @@ html, body {
 .btn-cta:hover {
     opacity: 0.9;
 }
+
+/* --- Sistema de Filtros Dinâmicos --- */
+.filter-btn {
+    background-color: var(--bg-surface);
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: rgba(0, 242, 254, 0.5);
+    color: var(--text-pure);
+}
+
+.filter-btn.active {
+    background: rgba(0, 242, 254, 0.1);
+    color: var(--quantum-cyan);
+    border-color: var(--quantum-cyan);
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.1);
+}

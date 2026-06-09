@@ -17,8 +17,16 @@ layout: default
 
     <!-- Grid de Ebooks Dinâmicos via YAML -->
     <div class="catalog-grid">
+        <h2 style="font-size: 1.8rem; font-weight: 800; border-left: 4px solid var(--quantum-cyan); padding-left: 1rem; margin-bottom: 2rem;">
+        Sistemas e Infoprodutos Disponíveis
+    </h2>
+
+    <div id="filter-container" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap;">
+        </div>
+
+    <div class="catalog-grid">
         {% for product in site.products %}
-        <article class="product-card">
+        <article class="product-card" data-category="{{ product.badge | default: 'Geral' }}">
             <div>
                 {% if product.badge %}
                 <span class="card-badge">{{ product.badge }}</span>
@@ -31,7 +39,7 @@ layout: default
                 <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-pure);">
                     <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">R$</span> {{ product.price }}
                 </div>
-                <a href="{{ product.hotmart_url }}" target="_blank" rel="noopener noreferrer" class="btn-cta">Adquirir Acesso</a>
+                <a href="{{ product.hotmart_url }}" target="_blank" rel="noopener noreferrer" class="btn-cta" data-product-id="{{ product.id }}" data-product-title="{{ product.title }}">Adquirir Acesso</a>
             </div>
             <a href="{{ product.url | relative_url }}" style="color: var(--quantum-cyan); text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 1rem;">Saiba mais sobre este manual →</a>
         </article>
@@ -88,4 +96,82 @@ layout: default
     }
     </script>
 
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    
+    /* =========================================================
+       MÓDULO 1: FILTRAGEM DINÂMICA (Causa/Efeito: Fadiga Decisória)
+       ========================================================= */
+    const filterContainer = document.getElementById('filter-container');
+    const cards = document.querySelectorAll('.product-card');
+    const categoriesSet = new Set();
+
+    // 1. Extrair categorias existentes baseadas nos badges gerados
+    cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (cat) categoriesSet.add(cat);
+    });
+
+    // 2. Função construtora de botões
+    const createButton = (text, filterValue, isActive = false) => {
+        const btn = document.createElement('button');
+        btn.textContent = text;
+        btn.className = `filter-btn ${isActive ? 'active' : ''}`;
+        btn.setAttribute('data-filter', filterValue);
+        
+        btn.addEventListener('click', () => {
+            // Resetar estados visuais
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Aplicar lógica de exibição
+            cards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'flex'; // Mantém o layout flex do card
+                    card.style.animation = 'fadeIn 0.5s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+        return btn;
+    };
+
+    // 3. Injetar botões no DOM
+    if (categoriesSet.size > 0 && filterContainer) {
+        filterContainer.appendChild(createButton('Todos os Produtos', 'all', true));
+        categoriesSet.forEach(category => {
+            filterContainer.appendChild(createButton(category, category));
+        });
+    }
+
+    /* =========================================================
+       MÓDULO 2: MÉTRICAS AVANÇADAS DE CONVERSÃO (Eventos CTA)
+       ========================================================= */
+    const ctaButtons = document.querySelectorAll('.btn-cta');
+    
+    ctaButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const productId = btn.getAttribute('data-product-id');
+            const productTitle = btn.getAttribute('data-product-title');
+            
+            // Log local para auditoria e debug
+            console.log(`[SYS-LOG] Conversão Iniciada. Produto: ${productTitle} | ID: ${productId}`);
+
+            // Integração futura (Exemplo de Push para Google Tag Manager / Meta Pixel)
+            if (typeof dataLayer !== 'undefined') {
+                dataLayer.push({
+                    'event': 'checkout_iniciado',
+                    'produto_id': productId,
+                    'produto_nome': productTitle
+                });
+            }
+            
+            // Aqui pode ser acoplada uma chamada Fetch (Webhook) silenciosa para um banco analítico no futuro.
+        });
+    });
+});
+</script>
+
 </main>
+
