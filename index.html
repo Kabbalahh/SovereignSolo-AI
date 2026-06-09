@@ -1,4 +1,4 @@
---
+---
 layout: default
 ---
 
@@ -63,9 +63,9 @@ layout: default
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "numberOfItems": {{ site.data.products | size }},
+      "numberOfItems": {{ site.products | size }},
       "itemListElement": [
-        {% for product in site.data.products %}
+        {% for product in site.products %}
         {
           "@type": "ListItem",
           "position": {{ forloop.index }},
