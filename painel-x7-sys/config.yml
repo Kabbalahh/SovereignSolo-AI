@@ -3,7 +3,7 @@ backend:
   name: github
   repo: kabbalahh/sovereignsolo-ai
   branch: main
-  base_url: https://github-oauth-login.net
+  base_url: https://project-trk11.vercel.app
 
 # 2. Roteamento de Mídias
 media_folder: "assets/images"
