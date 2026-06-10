@@ -123,3 +123,44 @@ layout: default
         </div>
     </article>
 </main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const timerElement = document.getElementById("timer-countdown");
+  const container = document.getElementById("urgency-timer");
+  if (!timerElement) return;
+
+  const durationMinutes = parseInt(container.getAttribute("data-duration")) || 15;
+  const cookieName = `timer_end_${window.location.pathname.replace(/\//g, '')}`;
+  
+  let endTime = localStorage.getItem(cookieName);
+
+  if (!endTime) {
+    endTime = new Date().getTime() + durationMinutes * 60 * 1000;
+    localStorage.setItem(cookieName, endTime);
+  } else {
+    endTime = parseInt(endTime);
+  }
+
+  function updateTimer() {
+    const now = new Date().getTime();
+    const distance = endTime - now;
+
+    if (distance < 0) {
+      const newEndTime = new Date().getTime() + durationMinutes * 60 * 1000;
+      localStorage.setItem(cookieName, newEndTime);
+      endTime = newEndTime;
+      return;
+    }
+
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    timerElement.innerHTML = 
+      (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
+});
+</script>
