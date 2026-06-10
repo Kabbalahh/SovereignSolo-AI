@@ -180,3 +180,40 @@ html, body {
         gap: 0.5rem;
     }
 }
+
+.conversion-box {
+  background: #111622;
+  border: 1px solid #1f293d;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.price-container {
+  margin: 15px 0;
+}
+.price-original {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+.price-promo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #00ff87;
+}
+.urgency-timer-container, .slots-alert {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.highlight-text {
+  color: #ff3e3e;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.highlight-slots {
+  color: #ffaa00;
+  font-weight: bold;
+}

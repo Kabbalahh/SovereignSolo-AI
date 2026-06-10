@@ -99,9 +99,24 @@ layout: default
         {% endif %}
 
         <div style="margin-top: 4rem; padding: 2.5rem; background: var(--bg-surface); border-radius: 16px; text-align: center; border: 1px solid rgba(0, 242, 254, 0.2);">
-            <div style="font-size: 2.2rem; font-weight: 800; color: var(--text-pure); margin-bottom: 1rem;">
-                <span style="font-size: 1.2rem; color: var(--text-muted); font-weight: 400;">R$</span> {{ page.price }}
-            </div>
+            <div class="conversion-box">
+                  <div class="urgency-timer-container" id="urgency-timer" data-duration="{{ page.timer_duration | default: 15 }}">
+                    <p>A oferta expira em: <span id="timer-countdown" class="highlight-text">00:00</span></p>
+                  </div>
+
+                  <div class="price-container">
+                    {% if page.price_original %}
+                      <span class="price-original">R$ {{ page.price_original }}</span>
+                    {% endif %}
+                    <span class="price-promo">R$ {{ page.price_promo }}</span>
+                  </div>
+
+                  {% if page.slots_limit %}
+                    <div class="slots-alert">
+                      <p>⚠️ Restam apenas <span class="highlight-slots">{{ page.slots_limit }}</span> licenças com este valor.</p>
+                    </div>
+                  {% endif %}
+                </div>
             <a href="{{ page.hotmart_url }}" target="_blank" rel="noopener noreferrer" class="btn-cta" data-product-id="{{ page.id }}" data-product-title="{{ page.title }}" style="display: inline-block; max-width: 300px; margin-top: 0;">
                 Adquirir Acesso Imediato
             </a>
