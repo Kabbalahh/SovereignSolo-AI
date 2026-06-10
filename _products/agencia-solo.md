@@ -11,7 +11,7 @@ tagline: Descubra a engenharia reversa algorítmica para romper a barreira das
   milhares de compradores prontos.
 price: 39,00
 badge: Produto Recém lançado
-cover_image: /assets/images/capa_face.jpg
+cover_image: https://raw.githubusercontent.com/Kabbalahh/SovereignSolo-AI/refs/heads/main/assets/images/capa_face.jpg
 hotmart_url: https://pay.hotmart.com/TEST_LINK_05
 ---
 ### 📑 O Que Você Vai Dominar com Este Manual:
