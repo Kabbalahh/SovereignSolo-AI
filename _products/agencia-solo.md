@@ -7,7 +7,7 @@ tagline: Descubra a engenharia reversa algorítmica para romper a barreira das
 price_original: "85.99"
 price: "39.00"
 badge: Produto Novo
-cover_image: https://raw.githubusercontent.com/Kabbalahh/SovereignSolo-AI/refs/heads/main/assets/images/manual_hacker_do_tiktok_shop_2026.jpg
+cover_image: /assets/images/capa_face.jpg
 hotmart_url: https://pay.hotmart.com/TEST_LINK_02
 rating_score: "4.5"
 rating_count: "35"
@@ -33,7 +33,7 @@ not_for_who:
 * **Capítulo 4:** Modelagem Narrativa em Séries Episódicas Como dividir temas complexos em partes sequenciais para estender o tempo de sessão do usuário, forçando o algoritmo a recomendar seus próximos vídeos de forma orgânica.
 * **Capítulo 5:** O Caminho da Monetização Nativa no Brasil Os parâmetros técnicos e fiscais para se posicionar comissões de 5% a 30% como afiliado, vendendo sem precisar investir em estoque físico ou logística.
 
-  ![](/assets/images/manual_hacker_do_tiktok_shop_2026.jpg)
+  ![]()
 
 ### 🛠️ Elementos Práticos Inclusos:
 
