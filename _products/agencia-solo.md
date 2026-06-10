@@ -1,13 +1,29 @@
 ---
 layout: product
-id: "agencia-solo"
-title: "Agência de IA de Um Homem Só"
-tagline: "O modelo de negócios definitivo para prestar serviços de automação e faturar alto sozinho."
-price: "97,00"
-cover_image: "/assets/images/ebook-agencia.webp"
-hotmart_url: "https://pay.hotmart.com/TEST_LINK_05"
-badge: "Negócios"
+id: marketing-digital
+title: Manual Hacker do TikTok Shop 2026
+tagline: Descubra a engenharia reversa algorítmica para romper a barreira das
+  200 visualizações e vender diariamente no TikTok Shop. Este manual prático
+  revela a equação matemática do Escore de Relevância ($E_{score}$), protocolos
+  de SEO para a Geração Z e a metodologia de Redundância Semântica em múltiplas
+  camadas. Aprenda a criar Séries Episódicas de alta conversão e estruturar
+  roteiros UGC que forçam o robô de recomendação a entregar seu conteúdo para
+  milhares de compradores prontos.
+price: 39,00
+badge: Produto Recém lançado
+cover_image: /assets/images/capa_face.jpg
+hotmart_url: https://pay.hotmart.com/TEST_LINK_05
 ---
-### Estrutura Detalhada
-Este é o manual prático para estruturar e automatizar sua agência utilizando inteligência artificial.
-(Insira aqui os tópicos, gatilhos mentais e a carta de vendas real do infoproduto).
+### 📑 O Que Você Vai Dominar com Este Manual:
+
+* **Capítulo 1:** O Fim do Alcance Aleatório Entenda a transição definitiva para o Gráfico de Interesse de Rede e aprenda como forçar o robô a ignorar o comportamento apático do grupo de controle inicial.
+* **Capítulo 2:** Engenharia de Retenção Extrema A psicologia exata por trás da *Interrupção de Padrão* nos primeiros 2 segundos. Conheça e aplique a equação estrutural do Escore de Relevância ($E_{score}$) focada em táticas de looping visual perfeito.
+* **Capítulo 3:** Protocolos de SEO para a Geração Z O TikTok se consolidou como o mecanismo prioritário de busca. Aprenda a estruturar metadados e legendas usando redundância semântica em três camadas (Verbal, OCR e Texto Oculto) para ser indexado no topo dos termos de compra.
+* **Capítulo 4:** Modelagem Narrativa em Séries Episódicas Como dividir temas complexos em partes sequenciais para estender o tempo de sessão do usuário, forçando o algoritmo a recomendar seus próximos vídeos de forma orgânica.
+* **Capítulo 5:** O Caminho da Monetização Nativa no Brasil Os parâmetros técnicos e fiscais para se posicionar comissões de 5% a 30% como afiliado, vendendo sem precisar investir em estoque físico ou logística.
+
+### 🛠️ Elementos Práticos Inclusos:
+
+* ✅ Checklist de Diagnóstico de Saúde do Perfil: Identifique se sua conta sofreu *shadowban* ou penalização estrutural de IP.
+* ✅ Calculadora de Performance Algorítmica: Mapeamento de métricas de alto esforço cognitivo (taxa de rewatch e conclusão).
+* ✅ Funil UGC de 5 Etapas para o TikTok Shop: O roteiro operacional exato da campanha piloto à escala viral.
