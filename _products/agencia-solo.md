@@ -4,8 +4,8 @@ id: marketing-digital
 title: Manual Hacker do TikTok Shop 2026
 tagline: Descubra a engenharia reversa algorítmica para romper a barreira das
   200 visualizações e vender diariamente no TikTok Shop
-price_original: 85,99
-price: 39,00
+price_original: "85.99"
+price: "39.00"
 badge: Produto Novo
 cover_image: /assets/images/capa_face.jpg
 hotmart_url: https://pay.hotmart.com/TEST_LINK_02
