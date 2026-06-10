@@ -1,13 +1,25 @@
 ---
 layout: product
-id: marketing-digital
-title: Manual Hacker do TikTok Shop 2026
-tagline: Descubra a engenharia reversa algorítmica para romper a barreira das
-  200 visualizações e vender diariamente no TikTok Shop.
-price: "39,00"
-badge: Produto Novo
-cover_image: /assets/images/capa_face.jpg
-hotmart_url: https://pay.hotmart.com/TEST_LINK_05
+id: "marketing-digital"
+title: "Manual Hacker do TikTok Shop 2026"
+tagline: "Descubra a engenharia reversa algorítmica para romper a barreira das
+  200 visualizações e vender diariamente no TikTok Shop"
+price: "47,00"
+cover_image: "/assets/images/capa_face.jpg"
+hotmart_url: "https://pay.hotmart.com/TEST_LINK_02"
+badge: "Produto Novo"
+rating_score: "4.9"
+rating_count: "156"
+gains:
+  - "Automação completa do primeiro contato sem custos de servidores externos."
+  - "Gatilhos estruturados de interrupção de padrão para reter o lead no privado."
+  - "Scripts copiáveis de alta conversão testados em operações de um operador."
+for_who:
+  - "Empreendedores solo que querem escalar vendas no um-para-um de forma automática."
+  - "Infoprodutores que sofrem com gargalos de suporte e recuperação de carrinho."
+not_for_who:
+  - "Grandes corporações que dependem de call centers complexos e fluxos burocráticos."
+  - "Pessoas que buscam fórmulas mágicas sem executar as automações propostas."
 ---
 ### 📑 O Que Você Vai Dominar com Este Manual:
 
@@ -34,3 +46,5 @@ hotmart_url: https://pay.hotmart.com/TEST_LINK_05
 
 
 * ✅ Funil UGC de 5 Etapas para o TikTok Shop: O roteiro operacional exato da campanha piloto à escala viral.
+
+---
