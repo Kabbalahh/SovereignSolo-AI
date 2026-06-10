@@ -81,7 +81,7 @@ layout: default
             "@type": "Product",
             "name": "{{ product.title }}",
             "description": "{{ product.tagline }}",
-            "image": "{{ site.url }}{{ product.cover_image }}",
+            "image": "{{ product.cover_image | absolute_url }}",
             "offers": {
               "@type": "Offer",
               "price": "{{ product.price | replace: ',', '.' }}",
