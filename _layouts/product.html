@@ -63,14 +63,6 @@ layout: default
             {{ content }}
         </div>
 
-        {% if page.for_who or page.not_for_who %}
-        <section style="margin-bottom: 4rem; padding: 2rem; background: rgba(17, 22, 34, 0.5); border-radius: 12px; border: 1px solid rgba(255,255,255,0.02);">
-            <h2 style="font-size: 1.5rem; font-weight: 800; text-align: center; margin-bottom: 2rem; color: #ffffff;">
-                Este Manual é Para Você?
-            </h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
-                
-                <div>
                     <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--quantum-cyan); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
                         <span style="background: rgba(0, 242, 254, 0.1); width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.9rem;">✓</span>
                         Ideal para quem busca:
@@ -99,6 +91,16 @@ layout: default
         {% endif %}
 
         <div style="margin-top: 4rem; padding: 2.5rem; background: var(--bg-surface); border-radius: 16px; text-align: center; border: 1px solid rgba(0, 242, 254, 0.2);">
+
+                <div style="margin-top: 4rem; padding: 2.5rem; background: var(--bg-surface); border-radius: 16px; text-align: center; border: 1px solid rgba(0, 242, 254, 0.2);">
+                    <div style="font-size: 2.2rem; font-weight: 800; color: var(--text-pure); margin-bottom: 1rem;">
+                        <span style="font-size: 1.2rem; color: var(--text-muted); font-weight: 400;">R$</span> {{ page.price }}
+                    </div>
+                    <a href="{{ page.hotmart_url }}" target="_blank" rel="noopener noreferrer" class="btn-cta" data-product-id="{{ page.id }}" data-product-title="{{ page.title }}" style="display: inline-block; max-width: 300px; margin-top: 0;">
+                        Adquirir Acesso Imediato
+                    </a>
+                </div>
+                
             <div class="conversion-box">
                   <div class="urgency-timer-container" id="urgency-timer" data-duration="{{ page.timer_duration | default: 15 }}">
                     <p>A oferta expira em: <span id="timer-countdown" class="highlight-text">00:00</span></p>
