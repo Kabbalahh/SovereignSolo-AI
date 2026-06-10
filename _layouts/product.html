@@ -63,72 +63,23 @@ layout: default
             {{ content }}
         </div>
 
-                    <div class="conversion-box" style="margin-top: 4rem; padding: 2.5rem; background: var(--bg-surface); border-radius: 16px; text-align: center; border: 1px solid rgba(0, 242, 254, 0.2);">
-    
-    <div class="urgency-timer-container" id="urgency-timer" data-duration="{{ page.timer_duration | default: 15 }}" style="font-size: 0.95rem; color: var(--text-pure); margin-bottom: 1rem;">
-        A oferta expira em: <span id="timer-countdown" style="color: #ff3e3e; font-family: monospace; font-weight: bold; font-size: 1.2rem;">00:00</span>
-    </div>
-
-    <div class="price-container" style="margin-bottom: 1rem; display: flex; justify-content: center; align-items: baseline; gap: 0.75rem;">
-        {% if page.price_original %}
-            <span class="price-original" style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.35); text-decoration: line-through;">R$ {{ page.price_original }}</span>
-        {% endif %}
-        <div class="price-promo" style="font-size: 2.5rem; font-weight: 800; color: var(--conversion-green);">
-            <span style="font-size: 1.2rem; color: var(--text-muted); font-weight: 400;">R$</span> {{ page.price }}
-        </div>
-    </div>
-
-    {% if page.slots_limit %}
-        <div class="slots-alert" style="font-size: 0.95rem; color: var(--text-pure); margin-bottom: 1.5rem;">
-            ⚠️ Restam apenas <span class="highlight-slots" style="color: #ffaa00; font-weight: bold;">{{ page.slots_limit }}</span> licenças com este valor.
-        </div>
-    {% endif %}
-
-    <a href="{{ page.hotmart_url }}" target="_blank" rel="noopener noreferrer" class="btn-cta" data-product-id="{{ page.id }}" data-product-title="{{ page.title }}" style="display: inline-block; max-width: 300px; margin-top: 0;">
-        Adquirir Acesso Imediato
-    </a>
-</div>
-
-        <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const timerElement = document.getElementById("timer-countdown");
-          const container = document.getElementById("urgency-timer");
-          if (!timerElement || !container) return;
-
-          const durationMinutes = parseInt(container.getAttribute("data-duration")) || 15;
-          const cookieName = `timer_end_${window.location.pathname.replace(/\//g, '')}`;
-          
-          let endTime = localStorage.getItem(cookieName);
-
-          if (!endTime) {
-            endTime = new Date().getTime() + durationMinutes * 60 * 1000;
-            localStorage.setItem(cookieName, endTime);
-          } else {
-            endTime = parseInt(endTime);
-          }
-
-          function updateTimer() {
-            const now = new Date().getTime();
-            const distance = endTime - now;
-
-            if (distance < 0) {
-              const newEndTime = new Date().getTime() + durationMinutes * 60 * 1000;
-              localStorage.setItem(cookieName, newEndTime);
-              endTime = newEndTime;
-              return;
-            }
-
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            timerElement.innerHTML = 
-              (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
-          }
-
-          updateTimer();
-          setInterval(updateTimer, 1000);
-        });
-        </script>
+        {% if page.for_who or page.not_for_who %}
+        <section style="margin-bottom: 4rem; padding: 2rem; background: rgba(17, 22, 34, 0.5); border-radius: 12px; border: 1px solid rgba(255,255,255,0.02);">
+            <h2 style="font-size: 1.5rem; font-weight: 800; text-align: center; margin-bottom: 2rem; color: #ffffff;">
+                Este Manual é Para Você?
+            </h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+                
+                <div>
+                    <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--quantum-cyan); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="background: rgba(0, 242, 254, 0.1); width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.9rem;">✓</span>
+                        Ideal para quem busca:
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem;">
+                        {% for item in page.for_who %}
+                        <li style="color: var(--text-pure); font-size: 0.95rem; line-height: 1.5; padding-left: 0.5rem;">• {{ item }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
 
                 <div>
@@ -147,35 +98,27 @@ layout: default
         </section>
         {% endif %}
 
-        <div style="margin-top: 4rem; padding: 2.5rem; background: var(--bg-surface); border-radius: 16px; text-align: center; border: 1px solid rgba(0, 242, 254, 0.2);">
+        <div class="conversion-box" style="margin-top: 4rem; padding: 2.5rem; background: var(--bg-surface); border-radius: 16px; text-align: center; border: 1px solid rgba(0, 242, 254, 0.2);">
+            
+            <div class="urgency-timer-container" id="urgency-timer" data-duration="{{ page.timer_duration | default: 15 }}" style="font-size: 0.95rem; color: var(--text-pure); margin-bottom: 1rem;">
+                A oferta expira em: <span id="timer-countdown" style="color: #ff3e3e; font-family: monospace; font-weight: bold; font-size: 1.2rem;">00:00</span>
+            </div>
 
-                <div style="margin-top: 4rem; padding: 2.5rem; background: var(--bg-surface); border-radius: 16px; text-align: center; border: 1px solid rgba(0, 242, 254, 0.2);">
-                    <div style="font-size: 2.2rem; font-weight: 800; color: var(--text-pure); margin-bottom: 1rem;">
-                        <span style="font-size: 1.2rem; color: var(--text-muted); font-weight: 400;">R$</span> {{ page.price }}
-                    </div>
-                    <a href="{{ page.hotmart_url }}" target="_blank" rel="noopener noreferrer" class="btn-cta" data-product-id="{{ page.id }}" data-product-title="{{ page.title }}" style="display: inline-block; max-width: 300px; margin-top: 0;">
-                        Adquirir Acesso Imediato
-                    </a>
+            <div class="price-container" style="margin-bottom: 1rem; display: flex; justify-content: center; align-items: baseline; gap: 0.75rem;">
+                {% if page.price_original %}
+                    <span class="price-original" style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.35); text-decoration: line-through;">R$ {{ page.price_original }}</span>
+                {% endif %}
+                <div class="price-promo" style="font-size: 2.5rem; font-weight: 800; color: var(--conversion-green);">
+                    <span style="font-size: 1.2rem; color: var(--text-muted); font-weight: 400;">R$</span> {{ page.price }}
                 </div>
+            </div>
 
-            <div class="conversion-box">
-                  <div class="urgency-timer-container" id="urgency-timer" data-duration="{{ page.timer_duration | default: 15 }}">
-                    <p>A oferta expira em: <span id="timer-countdown" class="highlight-text">00:00</span></p>
-                  </div>
-
-                  <div class="price-container">
-                    {% if page.price_original %}
-                      <span class="price-original">R$ {{ page.price_original }}</span>
-                    {% endif %}
-                    <span class="price-promo">R$ {{ page.price_promo }}</span>
-                  </div>
-
-                  {% if page.slots_limit %}
-                    <div class="slots-alert">
-                      <p>⚠️ Restam apenas <span class="highlight-slots">{{ page.slots_limit }}</span> licenças com este valor.</p>
-                    </div>
-                  {% endif %}
+            {% if page.slots_limit %}
+                <div class="slots-alert" style="font-size: 0.95rem; color: var(--text-pure); margin-bottom: 1.5rem;">
+                    ⚠️ Restam apenas <span class="highlight-slots" style="color: #ffaa00; font-weight: bold;">{{ page.slots_limit }}</span> licenças com este valor.
                 </div>
+            {% endif %}
+
             <a href="{{ page.hotmart_url }}" target="_blank" rel="noopener noreferrer" class="btn-cta" data-product-id="{{ page.id }}" data-product-title="{{ page.title }}" style="display: inline-block; max-width: 300px; margin-top: 0;">
                 Adquirir Acesso Imediato
             </a>
@@ -187,7 +130,7 @@ layout: default
 document.addEventListener("DOMContentLoaded", function() {
   const timerElement = document.getElementById("timer-countdown");
   const container = document.getElementById("urgency-timer");
-  if (!timerElement) return;
+  if (!timerElement || !container) return;
 
   const durationMinutes = parseInt(container.getAttribute("data-duration")) || 15;
   const cookieName = `timer_end_${window.location.pathname.replace(/\//g, '')}`;
