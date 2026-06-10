@@ -1,21 +1,41 @@
-title: "SovereignSolo AI"
-tagline: "Engenharia de Negócios de Uma Pessoa Só com IA"
-description: "Ebooks e estratégias de Marketing Digital de alta performance para empreendedores solo que utilizam automação por IA."
-url: "https://kabbalahh.github.io"
-baseurl: "/SovereignSolo-AI"
+# --- MÓDULO COMERCIAL (PRODUTOS) ---
+  - name: "products"
+    label: "Matriz de Produtos (Ebooks)"
+    folder: "_products"
+    create: true
+    identifier_field: "id"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "product"}
+      - {label: "ID de Sistema (ex: ebook-express)", name: "id", widget: "string"}
+      - {label: "Título do Produto", name: "title", widget: "string"}
+      - {label: "Tagline (Promessa)", name: "tagline", widget: "string"}
+      - {label: "Preço (ex: 47,00)", name: "price", widget: "string"}
+      - {label: "Badge (ex: Mais Vendido)", name: "badge", widget: "string", required: false}
+      - {label: "Imagem de Capa", name: "cover_image", widget: "image"}
+      - {label: "Link Hotmart", name: "hotmart_url", widget: "string"}
+      
+      # --- IMPLEMENTAÇÃO: PROVA SOCIAL ANCHOR ---
+      - {label: "Nota de Avaliação (ex: 4.9)", name: "rating_score", widget: "string", required: false, default: "4.9"}
+      - {label: "Total de Avaliações (ex: 128)", name: "rating_count", widget: "string", required: false, default: "128"}
+      
+      # --- IMPLEMENTAÇÃO: GANHOS PRÁTICOS ---
+      - label: "Bullet Points de Ganho Prático"
+        name: "gains"
+        widget: "list"
+        required: false
+        field: {label: "Benefício Focado no Resultado", name: "item", widget: "string"}
+        
+      # --- IMPLEMENTAÇÃO: FILTRO DE QUALIFICAÇÃO ---
+      - label: "Para Quem É (Critérios Positivos)"
+        name: "for_who"
+        widget: "list"
+        required: false
+        field: {label: "Público Alvo Ideal", name: "item", widget: "string"}
+      - label: "Para Quem Não É (Critérios Negativos)"
+        name: "not_for_who"
+        widget: "list"
+        required: false
+        field: {label: "Público Não Desejado", name: "item", widget: "string"}
 
-# Configurações de Compilação e SEO
-markdown: kramdown
-highlighter: rouge
-permalink: /blog/:title/
-
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-
-# Configurações de Collections (Alinhado estritamente na Raiz)
-collections:
-  products:
-    output: true
-    permalink: /produtos/:path/
+      - {label: "Estrutura Detalhada / Copy", name: "body", widget: "markdown"}
