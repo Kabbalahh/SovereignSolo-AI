@@ -7,7 +7,7 @@ tagline: Descubra a engenharia reversa algorítmica para romper a barreira das
 price_original: "85.99"
 price: "39.00"
 badge: Produto Novo
-cover_image: /assets/images/capa_face.jpg
+cover_image: https://raw.githubusercontent.com/Kabbalahh/SovereignSolo-AI/refs/heads/main/assets/images/manual_hacker_do_tiktok_shop_2026.jpg
 hotmart_url: https://pay.hotmart.com/TEST_LINK_02
 rating_score: "4.5"
 rating_count: "35"
