@@ -8,7 +8,7 @@ price_original: "85.99"
 price: "39.00"
 badge: Produto Novo
 cover_image: /assets/images/capa_face.jpg
-hotmart_url: https://pay.hotmart.com/TEST_LINK_02
+hotmart_url: https://pay.hotmart.com/C106247935D
 rating_score: "4.5"
 rating_count: "35"
 slots_limit: 100
